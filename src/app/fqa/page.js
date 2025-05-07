@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { toast } from "sonner";
 
 export default function FAQSection() {
     const faqs = [
@@ -17,25 +18,37 @@ export default function FAQSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="py-16 bg-gray-50"
+            className="py-10 sm:py-14 md:py-16  min-h-screen"
         >
-            <div className="max-w-3xl mx-auto">
-                <h3 className="text-blue-700 font-bold mb-2">Vision Behind Exambazz</h3>
-                <div className="mb-6 text-lg font-semibold">সচরাচর জিজ্ঞাসা</div>
-                <div className="mb-8 text-gray-600">
-                    আপনার প্রশ্নের উত্তর এখানে পাবেন। আরও জানতে আমাদের সাথে যোগাযোগ করুন।
+            <div className="w-full max-w-lg sm:max-w-2xl md:max-w-4xl mx-auto px-4 sm:px-6 md:px-4">
+                {/* Header Box */}
+                <div className="border-2 border-blue-400 rounded-lg p-4 sm:p-6 md:p-8 mb-8 sm:mb-10 bg-white">
+                    <div className="flex items-center mb-2">
+                        <span className="text-blue-600 text-xs sm:text-sm font-medium mr-2">🔷 Vision Behind AtomAI</span>
+                    </div>
+                    <div className="text-2xl sm:text-3xl font-bold leading-tight mb-2">সচরাচর জিজ্ঞাসা</div>
+                    <div className="text-gray-600 font-semibold text-sm sm:text-base mb-4">
+                        মোদের মথুরা টরমল করে পাপ-লালসার ভারে, ভোগের সমিধ জ্বালিয়া আমরা পুড়িতেছি বারে বারে। ঘরে ফিরে যাও সোনার কিশোর! এ পাপমথুরাপুরী, তোমার সোনার অঙ্গেতে দেবে বিষবান ছুঁড়ি ছুঁড় |
+                    </div>
+                    <button
+                        className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 sm:px-6 rounded-full shadow transition-colors duration-200 mb-2 text-base sm:text-lg active:scale-95"
+                        onClick={() => toast.success("You have joined the waitlist!")}
+                    >
+                        Join Waitlist →
+                    </button>
                 </div>
-                <div className="space-y-4">
+                {/* FAQ Section */}
+                <div className="space-y-3 sm:space-y-4">
                     {faqs.map((faq, idx) => (
                         <motion.details
                             key={idx}
-                            className="bg-white rounded-lg shadow px-6 py-4"
+                            className="bg-white rounded-lg border border-blue-200 shadow px-4 sm:px-6 py-3 sm:py-4"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.1 * idx }}
                         >
-                            <summary className="cursor-pointer font-semibold">{faq.q}</summary>
-                            <div className="mt-2 text-gray-700">{faq.a}</div>
+                            <summary className="cursor-pointer font-semibold text-base sm:text-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-300">{faq.q}</summary>
+                            <div className="mt-2 text-gray-700 text-sm sm:text-base">{faq.a}</div>
                         </motion.details>
                     ))}
                 </div>

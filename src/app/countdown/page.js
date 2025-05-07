@@ -24,22 +24,22 @@ export default function Countdown() {
     }, []);
 
     return (
-        <div className="flex gap-4 justify-center mb-4">
-            <div className="flex flex-col items-center bg-[#232e4d] rounded-md px-5 py-2">
-                <span className="text-3xl font-bold text-white">{String(time.days).padStart(2, "0")}</span>
-                <span className="text-xs text-blue-200 font-semibold mt-1">DAYS</span>
+        <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center mb-4 px-2 sm:px-4">
+            <div className="flex flex-col items-center bg-[#232e4d] rounded-md px-2 sm:px-3 md:px-4 lg:px-5 py-2 min-w-[60px] sm:min-w-[70px] md:min-w-[80px]">
+                <span className="text-xl sm:text-2xl md:text-3xl font-bold text-white">{String(time.days).padStart(2, "0")}</span>
+                <span className="text-[10px] sm:text-xs text-blue-200 font-semibold mt-1">DAYS</span>
             </div>
-            <div className="flex flex-col items-center bg-[#232e4d] rounded-md px-5 py-2">
-                <span className="text-3xl font-bold text-white">{String(time.hours).padStart(2, "0")}</span>
-                <span className="text-xs text-blue-200 font-semibold mt-1">HOURS</span>
+            <div className="flex flex-col items-center bg-[#232e4d] rounded-md px-2 sm:px-3 md:px-4 lg:px-5 py-2 min-w-[60px] sm:min-w-[70px] md:min-w-[80px]">
+                <span className="text-xl sm:text-2xl md:text-3xl font-bold text-white">{String(time.hours).padStart(2, "0")}</span>
+                <span className="text-[10px] sm:text-xs text-blue-200 font-semibold mt-1">HOURS</span>
             </div>
-            <div className="flex flex-col items-center bg-[#232e4d] rounded-md px-5 py-2">
-                <span className="text-3xl font-bold text-white">{String(time.minutes).padStart(2, "0")}</span>
-                <span className="text-xs text-blue-200 font-semibold mt-1">MINUTES</span>
+            <div className="flex flex-col items-center bg-[#232e4d] rounded-md px-2 sm:px-3 md:px-4 lg:px-5 py-2 min-w-[60px] sm:min-w-[70px] md:min-w-[80px]">
+                <span className="text-xl sm:text-2xl md:text-3xl font-bold text-white">{String(time.minutes).padStart(2, "0")}</span>
+                <span className="text-[10px] sm:text-xs text-blue-200 font-semibold mt-1">MINUTES</span>
             </div>
-            <div className="flex flex-col items-center bg-[#232e4d] rounded-md px-5 py-2">
-                <span className="text-3xl font-bold text-white">{String(time.seconds).padStart(2, "0")}</span>
-                <span className="text-xs text-blue-200 font-semibold mt-1">SECONDS</span>
+            <div className="flex flex-col items-center bg-[#232e4d] rounded-md px-2 sm:px-3 md:px-4 lg:px-5 py-2 min-w-[60px] sm:min-w-[70px] md:min-w-[80px]">
+                <span className="text-xl sm:text-2xl md:text-3xl font-bold text-white">{String(time.seconds).padStart(2, "0")}</span>
+                <span className="text-[10px] sm:text-xs text-blue-200 font-semibold mt-1">SECONDS</span>
             </div>
         </div>
     );
