@@ -4,6 +4,7 @@ import HeroSection from "./hero/page";
 import BenefitsSection from "./benefit/page";
 import FAQSection from "./fqa/page";
 import Footer from "./footer/footer";
+import ReviewPage from "./review/page";
 
 export default function Home() {
   return (
@@ -13,7 +14,9 @@ export default function Home() {
 
       <BenefitsSection />
       <FAQSection />
+      <ReviewPage />
       <Footer />
+
     </div>
   );
 }

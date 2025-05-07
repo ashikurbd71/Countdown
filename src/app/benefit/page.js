@@ -14,7 +14,7 @@ export default function BenefitsSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="py-16 "
         >
-            <div className="max-w-4xl mx-auto px-4 mt-10 text-center">
+            <div className="max-w-6xl mx-auto px-4 mt-10 text-center">
                 <div className="flex items-center justify-center mb-2 gap-2">
                     <BadgeCheck className="text-blue-500 text-lg" />
                     <span className="text-blue-500 font-medium text-sm">Perks as a waitlist member</span>

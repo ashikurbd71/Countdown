@@ -20,18 +20,18 @@ export default function FAQSection() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="py-10 sm:py-14 md:py-16  min-h-screen"
         >
-            <div className="w-full max-w-lg sm:max-w-2xl md:max-w-4xl mx-auto px-4 sm:px-6 md:px-4">
+            <div className="w-full max-w-lg sm:max-w-2xl md:max-w-6xl mx-auto px-4 sm:px-6 md:px-4">
                 {/* Header Box */}
                 <div className="border-2 border-blue-400 rounded-lg p-4 sm:p-6 md:p-8 mb-8 sm:mb-10 bg-white">
                     <div className="flex items-center mb-2">
                         <span className="text-blue-600 text-xs sm:text-sm font-medium mr-2">🔷 Vision Behind AtomAI</span>
                     </div>
-                    <div className="text-2xl sm:text-3xl font-bold leading-tight mb-2">সচরাচর জিজ্ঞাসা</div>
+                    <div className="text-2xl sm:text-3xl font-bold leading-tight mb-2">Frequently Asked Questions</div>
                     <div className="text-gray-600 font-semibold text-sm sm:text-base mb-4">
                         মোদের মথুরা টরমল করে পাপ-লালসার ভারে, ভোগের সমিধ জ্বালিয়া আমরা পুড়িতেছি বারে বারে। ঘরে ফিরে যাও সোনার কিশোর! এ পাপমথুরাপুরী, তোমার সোনার অঙ্গেতে দেবে বিষবান ছুঁড়ি ছুঁড় |
                     </div>
                     <button
-                        className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 sm:px-6 rounded-full shadow transition-colors duration-200 mb-2 text-base sm:text-lg active:scale-95"
+                        className="w-full cursor-pointer sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 sm:px-6 rounded-full shadow transition-colors duration-200 mb-2 text-base sm:text-lg active:scale-95"
                         onClick={() => toast.success("You have joined the waitlist!")}
                     >
                         Join Waitlist →

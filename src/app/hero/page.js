@@ -69,8 +69,8 @@ export default function HeroSection() {
             <div className="my-6 sm:my-8 lg:my-10 w-[95%] sm:w-[85%] md:w-[75%] lg:w-[450px] h-full  mx-auto rounded-2xl shadow-2xl p-4 sm:p-6 lg:p-8 space-y-4 sm:space-y-5 bg-gradient-to-br from-[#2563eb] to-[#020617] relative overflow-hidden"
                 style={{ boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)" }}>
                 <div className="flex justify-center">
-                    <span className="bg-white/80 text-blue-700 text-[10px] sm:text-xs font-semibold px-3 sm:px-4 py-1 rounded-full mb-2 sm:mb-4 shadow">
-                        🚀 LAUNCHES: MAY 7, 2025
+                    <span className="bg-white text-blue-700 text-[10px] sm:text-xs font-semibold px-3 sm:px-4 py-1 rounded-full mb-2 sm:mb-4 shadow">
+                        LAUNCHES: MAY 17, 2025
                     </span>
                 </div>
                 <h1 className="text-2xl sm:text-3xl font-bold text-white text-center mb-2">Join the waitlist</h1>
