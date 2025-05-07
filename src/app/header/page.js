@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import toast, { Toaster } from "react-hot-toast";
+import { Toaster, toast } from "sonner";
 
 export default function Header() {
     const [showModal, setShowModal] = useState(false);
@@ -13,14 +13,14 @@ export default function Header() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        toast.success(`Thank you! We'll notify you`);
+        toast.success("Thank you! We'll notify you");
         setShowModal(false);
         setEmail("");
     };
 
     return (
         <header className="flex justify-between items-center px-6 py-4 bg-white shadow-sm rounded-b-xl">
-            <Toaster position="top-right" />
+
             <div className="font-bold text-blue-700 text-lg">Exambazz</div>
             <nav className="hidden md:flex gap-6 text-gray-700">
                 <a href="#benefits">Early Benefits</a>
@@ -68,5 +68,6 @@ export default function Header() {
                 </div>
             )}
         </header>
+
     );
 }
