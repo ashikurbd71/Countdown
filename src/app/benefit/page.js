@@ -23,8 +23,8 @@ export default function BenefitsSection() {
                 <p className="text-gray-600 mb-8 text-base md:text-lg">
                     Obtain early access to our program and remain informed.
                 </p>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <Card className="border border-blue-200 rounded-lg overflow-hidden bg-gradient-to-tl from-blue-50 to-white">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {/* <Card className="border border-blue-200 rounded-lg overflow-hidden bg-gradient-to-tl from-blue-50 to-white">
                         <CardContent className="flex flex-col items-center py-8 bg-transparent">
                             <div className="flex items-center gap-1 text-xs text-gray-500 mb-1">
                                 <Bell className="text-blue-400 w-4 h-4" />
@@ -32,9 +32,9 @@ export default function BenefitsSection() {
                             </div>
                             <div className="font-bold text-2xl mb-1">মার্চ ২০২৫</div>
                         </CardContent>
-                    </Card>
+                    </Card> */}
                     <Card className="border border-blue-200 rounded-lg overflow-hidden bg-gradient-to-tl from-blue-50 to-white">
-                        <CardContent className="flex flex-col items-center py-8 bg-transparent">
+                        <CardContent className="flex flex-col items-center py-14 bg-transparent">
                             <div className="flex items-center gap-1 text-xs text-gray-500 mb-1">
                                 <Gift className="text-blue-400 w-4 h-4" />
                                 Exclusive Discount
@@ -43,12 +43,12 @@ export default function BenefitsSection() {
                         </CardContent>
                     </Card>
                     <Card className="border border-blue-200 rounded-lg overflow-hidden bg-gradient-to-tl from-blue-50 to-white">
-                        <CardContent className="flex flex-col items-center py-8 bg-transparent">
+                        <CardContent className="flex flex-col items-center py-14 bg-transparent">
                             <div className="flex items-center gap-1 text-xs text-gray-500 mb-1">
                                 <Shield className="text-blue-400 w-4 h-4" />
                                 Exclusive Badge
                             </div>
-                            <div className="font-bold text-2xl mb-1">Founder's Wall</div>
+                            <div className="font-bold text-2xl mb-1">Foundation Builder</div>
                         </CardContent>
                     </Card>
                 </div>
