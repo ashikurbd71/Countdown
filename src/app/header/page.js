@@ -55,15 +55,15 @@ export default function Header() {
                 <nav className="font-semibold flex gap-3 md:gap-4 lg:gap-6 text-gray-700">
                     <Link href="#benefits" className="hover:text-blue-500 transition-colors text-sm md:text-base">Early Benefits</Link>
 
-                    <Link href="#reviews" className="hover:text-blue-500 transition-colors text-sm md:text-base">Early Reviews</Link>
+                    <Link href="#feature" className="hover:text-blue-500 transition-colors text-sm md:text-base">Feature</Link>
                     <Link href="#faq" className="hover:text-blue-500 transition-colors text-sm md:text-base">FAQs</Link>
                 </nav>
-                <button
+                <Link href="#notify"
                     className="bg-blue-500 hover:bg-blue-600 text-white px-3 md:px-4 py-2 rounded-xl cursor-pointer font-semibold transition text-sm md:text-base whitespace-nowrap"
-                    onClick={handleNotify}
+
                 >
                     Get Notified
-                </button>
+                </Link>
             </div>
 
             {/* Mobile Navigation */}
@@ -73,54 +73,20 @@ export default function Header() {
                         <nav className="flex flex-col p-4 space-y-2">
                             <Link href="#benefits" className="py-2 px-3 text-gray-700 font-semibold hover:bg-gray-50 rounded-lg transition-colors text-sm md:text-base">Early Benefits</Link>
 
-                            <Link href="#reviews" className="py-2 px-3 text-gray-700 font-semibold hover:bg-gray-50 rounded-lg transition-colors text-sm md:text-base">Early Reviews</Link>
+                            <Link href="#feature" className="py-2 px-3 text-gray-700 font-semibold hover:bg-gray-50 rounded-lg transition-colors text-sm md:text-base">Feature</Link>
                             <Link href="#faq" className="py-2 px-3 text-gray-700 font-semibold hover:bg-gray-50 rounded-lg transition-colors text-sm md:text-base">FAQs</Link>
-                            <button
-                                className="mt-4 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-xl cursor-pointer font-semibold transition w-full text-sm md:text-base"
-                                onClick={handleNotify}
+                            <Link href="#notify"
+                                className="mt-4 bg-blue-500 text-center hover:bg-blue-600 text-white px-4 py-2 rounded-xl cursor-pointer font-semibold transition w-full text-sm md:text-base"
+
                             >
                                 Get Notified
-                            </button>
+                            </Link>
                         </nav>
                     </div>
                 )
             }
 
-            {
-                showModal && (
-                    <div className="fixed inset-0 top-[80px] left-[1400px] bg-opacity-70 z-50 p-4 md:p-6">
-                        <form
-                            onSubmit={handleSubmit}
-                            className="bg-white p-4 sm:p-5 md:p-6 rounded-lg shadow-lg flex flex-col gap-4 w-full max-w-md mx-auto"
-                        >
-                            <label className="font-semibold text-sm md:text-base">Enter your email to get notified:</label>
-                            <input
-                                type="email"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                                required
-                                className="border px-3 py-2 rounded text-sm md:text-base"
-                                placeholder="you@example.com"
-                            />
-                            <div className="flex gap-2 md:gap-3">
-                                <button
-                                    type="submit"
-                                    className="bg-blue-500 hover:bg-blue-600 text-white px-3 md:px-4 py-2 rounded-lg font-semibold text-sm md:text-base flex-1"
-                                >
-                                    Notify Me
-                                </button>
-                                <button
-                                    type="button"
-                                    onClick={() => setShowModal(false)}
-                                    className="bg-gray-300 hover:bg-gray-400 text-gray-800 px-3 md:px-4 py-2 rounded-lg font-semibold text-sm md:text-base flex-1"
-                                >
-                                    Cancel
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                )
-            }
+
         </header >
     );
 }

@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import dynamic from 'next/dynamic';
 
-export default function Countdown() {
+function CountdownComponent() {
     const targetDate = new Date("2025-05-17T00:00:00"); // 17 May 2025
 
     function getTimeLeft() {
@@ -44,3 +45,10 @@ export default function Countdown() {
         </div>
     );
 }
+
+// Export a dynamically imported version of the component with SSR disabled
+const Countdown = dynamic(() => Promise.resolve(CountdownComponent), {
+    ssr: false
+});
+
+export default Countdown;
