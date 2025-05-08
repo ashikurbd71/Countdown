@@ -22,7 +22,7 @@ function CountdownComponent() {
     useEffect(() => {
         const timer = setInterval(() => setTime(getTimeLeft()), 1000);
         return () => clearInterval(timer);
-    }, []);
+    }, [getTimeLeft]);
 
     return (
         <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center mb-4 px-2 sm:px-4">

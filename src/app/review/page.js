@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const testimonials = [
     {
@@ -103,7 +104,13 @@ export default function ReviewPage() {
                                 style={{ minHeight: CARD_HEIGHT - 24 }}
                             >
                                 <div className="flex items-center mb-4">
-                                    <img src={t.img} alt={t.name} className="w-12 h-12 rounded-full mr-4 object-cover border-2 border-indigo-500" />
+                                    <Image
+                                        src={t.img}
+                                        alt={t.name}
+                                        width={48}
+                                        height={48}
+                                        className="rounded-full mr-4 object-cover border-2 border-indigo-500"
+                                    />
                                     <div>
                                         <div className="font-semibold text-gray-900">{t.name}</div>
                                         <div className="text-indigo-500 text-sm">{t.title}</div>

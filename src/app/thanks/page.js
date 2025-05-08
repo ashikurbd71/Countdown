@@ -7,7 +7,7 @@ export default function ThankYouPage() {
         <div className="relative flex items-center justify-center min-h-screen bg-gradient-to-br from-black via-gray-900 to-black overflow-hidden">
             {/* Large background text */}
             <h1 className="absolute inset-0 flex items-center justify-center text-[10vw] font-extrabold text-white/10 select-none pointer-events-none z-0">
-                You're In!
+                You&apos;re In!
             </h1>
             {/* Foreground content */}
             <div className="relative z-10 flex flex-col items-center justify-center text-center">
