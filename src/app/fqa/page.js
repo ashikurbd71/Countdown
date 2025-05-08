@@ -50,7 +50,7 @@ export default function FAQSection() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.1 * idx }}
                         >
-                            <summary className="cursor-pointer font-semibold text-base sm:text-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-300">{faq.q}</summary>
+                            <summary className="cursor-pointer font-semibold text-base sm:text-lg text-gray-800  ">{faq.q}</summary>
                             <div className="mt-2 text-gray-700 text-sm sm:text-base">{faq.a}</div>
                         </motion.details>
                     ))}

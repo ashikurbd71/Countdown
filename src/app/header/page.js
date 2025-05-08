@@ -28,7 +28,7 @@ export default function Header() {
 
     return (
         <header className="flex justify-between items-center px-4 sm:px-6 md:px-8 lg:px-10 py-3 sm:py-4 mb-5 bg-white shadow-sm relative">
-            <Image src={img} alt="Exambazz" width={120} height={10} className="w-[120px] sm:w-[140px] md:w-[150px] lg:w-[160px]" />
+            <Image src={img} alt="Exambazz" width={110} height={10} className="w-[120px] sm:w-[140px] md:w-[150px] lg:w-[160px]" />
 
             {/* Mobile Menu Button */}
             <button

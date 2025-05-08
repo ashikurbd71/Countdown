@@ -18,9 +18,9 @@ export default function Footer() {
 
                     <div className='flex justify-between lg:flex-row flex-col gap-8 lg:gap-24'>
                         {/* Links */}
-                        <div className="space-y-4">
+                        <div className="space-y-4 flex flex-col justify-center lg:justify-start items-center">
                             <h3 className="text-base font-semibold text-gray-200">Links</h3>
-                            <ul className="space-y-2">
+                            <ul className="space-y-2 flex flex-col justify-center lg:justify-start items-center">
                                 <li><Link href="#benefits" className="text-gray-400 hover:text-white transition-colors">Early Benefits
                                 </Link></li>
                                 <li><Link href="#feature" className="text-gray-400 hover:text-white transition-colors">
@@ -31,9 +31,9 @@ export default function Footer() {
                         </div>
 
                         {/* Social Links */}
-                        <div className="space-y-4">
+                        <div className="space-y-4 flex flex-col justify-center lg:justify-start items-center">
                             <h3 className="text-base font-semibold text-gray-200">Social Links</h3>
-                            <ul className="space-y-2">
+                            <ul className="space-y-2 flex flex-col justify-center lg:justify-start items-center">
                                 <li className="flex items-center space-x-2">
                                     <Facebook className="w-4 h-4 text-gray-400" />
                                     <Link href="https://www.facebook.com/ExamBazz" target='_blank' className="text-gray-400 hover:text-white transition-colors">Facebook</Link>

@@ -15,45 +15,44 @@ const cards = [
     {
         title: "Security Features",
         description: "Prevent cheating with copy, tab-switch, and screenshot blocking",
-        color: "bg-blue-900",
+        color: "bg-blue-400",
         icon: Shield,
-        gradient: "from-blue-900 to-blue-800"
+        gradient: "from-blue-600/90 to-blue-800/90",
     },
     {
         title: "Question Bank Management",
         description: "Built-in question bank with tagging and one-click paper creation",
         color: "bg-cyan-400",
         icon: BookOpen,
-        gradient: "from-cyan-400 to-cyan-500"
+        gradient: "from-cyan-600/90 to-cyan-800/90"
     },
     {
         title: "Exam Batch Management",
         description: "Manage multiple batches and monitor course-wise progress",
-        color: "bg-purple-800",
+        color: "bg-purple-400",
         icon: Users,
-        gradient: "from-purple-800 to-purple-900"
+        gradient: "from-purple-600/90 to-purple-800/90"
     },
     {
         title: "Student Progress Analysis",
         description: "Detailed performance reports to identify and address weaknesses",
-        color: "bg-yellow-300",
+        color: "bg-yellow-400",
         icon: BarChart3,
-        gradient: "from-yellow-300 to-yellow-400",
-        textColor: "text-black"
+        gradient: "from-yellow-600/90 to-yellow-800/90"
     },
     {
         title: "Organization Management",
         description: "Team-based exam creation and teacher management for edtech",
-        color: "bg-violet-700",
+        color: "bg-violet-400",
         icon: Building2,
-        gradient: "from-violet-700 to-violet-800"
+        gradient: "from-violet-600/90 to-violet-800/90"
     },
     {
         title: "Offline Exam Assembler",
         description: "Instant offline paper creation with question shuffling",
-        color: "bg-green-600",
+        color: "bg-green-400",
         icon: FileText,
-        gradient: "from-green-600 to-green-700"
+        gradient: "from-green-600/90 to-green-800/90"
     },
 ];
 
@@ -75,7 +74,7 @@ export default function FeaturePage() {
     }, []);
 
     return (
-        <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 lg:px-8">
+        <section className="py-8 sm:py-12 md:py-24 px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
                 <motion.div
                     id="feature"
@@ -111,11 +110,17 @@ export default function FeaturePage() {
                                 key={idx}
                                 ref={ref}
                                 className={`
-                                    w-full min-h-[160px] sm:min-h-[180px] rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl
+                                    w-full min-h-[160px] sm:min-h-[180px] rounded-xl sm:rounded-2xl
                                     flex flex-col items-start p-4 sm:p-6 md:p-8 relative overflow-hidden
                                     bg-gradient-to-br ${card.gradient}
-                                    ${card.textColor || 'text-white'}
-                                    hover:shadow-2xl transition-all duration-300
+                                    text-white
+                                    border border-white/20
+                                    shadow-[0_8px_30px_rgb(0,0,0,0.12)]
+                                    hover:shadow-[0_8px_30px_rgb(0,0,0,0.25)]
+                                    hover:scale-[1.02]
+                                    transition-all duration-300
+                                    backdrop-blur-sm
+                                    group
                                 `}
                                 initial={{ opacity: 0, y: 60 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -127,15 +132,17 @@ export default function FeaturePage() {
                                     stiffness: 80,
                                 }}
                             >
-                                <div className="absolute top-2 sm:top-4 right-2 sm:right-4 opacity-20">
-                                    <Icon size={60} className="sm:w-[80px] sm:h-[80px]" />
+                                <div className="absolute top-2 sm:top-4 right-2 sm:right-4 opacity-10 group-hover:opacity-20 transition-opacity duration-300">
+                                    <Icon size={80} className="sm:w-[100px] sm:h-[100px]" />
                                 </div>
-                                <div className="relative z-10">
-                                    <div className="flex gap-2 sm:gap-3 mb-2 sm:mb-4">
-                                        <Icon size={20} className="sm:w-6 sm:h-6" />
-                                        <h3 className="font-bold text-lg sm:text-xl md:text-2xl">{card.title}</h3>
+                                <div className="relative z-10 w-full">
+                                    <div className="flex gap-2 sm:gap-3 mb-3 sm:mb-4 items-center">
+                                        <div className="p-2 rounded-lg bg-white/20 backdrop-blur-sm group-hover:bg-white/30 transition-colors duration-300">
+                                            <Icon size={24} className="sm:w-7 sm:h-7" />
+                                        </div>
+                                        <h3 className="font-bold text-lg sm:text-xl md:text-2xl text-white">{card.title}</h3>
                                     </div>
-                                    <p className="text-xs sm:text-sm md:text-base opacity-90 leading-relaxed">{card.description}</p>
+                                    <p className="text-sm sm:text-base md:text-lg text-white/90 leading-relaxed">{card.description}</p>
                                 </div>
                             </motion.div>
                         );
