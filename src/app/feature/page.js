@@ -1,6 +1,6 @@
 "use client";
-import React, { useRef, useState, useEffect } from "react";
-import { motion, useInView } from "framer-motion";
+import React, { useRef } from "react";
+import { motion } from "framer-motion";
 import {
     Shield,
     BookOpen,
@@ -57,21 +57,7 @@ const cards = [
 ];
 
 export default function FeaturePage() {
-    const [allInView, setAllInView] = useState(false);
     const cardRefs = useRef([]);
-
-    // Check if all cards are in view
-    useEffect(() => {
-        function checkAllInView() {
-            const allVisible = cardRefs.current.every(
-                (ref) => ref && ref.getBoundingClientRect().top < window.innerHeight
-            );
-            setAllInView(allVisible);
-        }
-        window.addEventListener("scroll", checkAllInView);
-        checkAllInView();
-        return () => window.removeEventListener("scroll", checkAllInView);
-    }, []);
 
     return (
         <section className="py-8 sm:py-12 md:py-24 px-4 sm:px-6 lg:px-8">
@@ -99,7 +85,7 @@ export default function FeaturePage() {
 
                 <div
                     className={`grid gap-4 sm:gap-6 md:gap-8 w-full transition-all duration-700
-                        ${allInView ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3" : "grid-cols-1"}
+                        grid-cols-1 sm:grid-cols-2 lg:grid-cols-3
                     `}
                 >
                     {cards.map((card, idx) => {
