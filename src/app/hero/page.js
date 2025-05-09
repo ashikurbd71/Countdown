@@ -9,19 +9,47 @@ import { Card, CardContent } from "@/components/ui/card";
 import Countdown from "../countdown/page";
 import { Facebook, FacebookIcon, Globe, Instagram, Linkedin, LinkedinIcon, Twitter, Youtube } from "lucide-react";
 import Link from "next/link";
-import star1 from '../../../public/star.png'
+import star1 from '../../assets/star.png'
 import Image from "next/image";
+import axios from "axios";
 export default function HeroSection() {
     const [email, setEmail] = useState("");
+    const [isLoading, setIsLoading] = useState(false);
     const router = useRouter();
 
-    const handleJoinWaitlist = () => {
+    const handleJoinWaitlist = async () => {
         if (!email) {
             toast.error("Please enter your email address.");
             return;
         }
-        router.push("/thanks");
-        setEmail(""); // Optionally clear the input
+
+        // Email validation regex
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            toast.error("Please enter a valid email address.");
+            return;
+        }
+
+        try {
+            setIsLoading(true);
+            const res = await axios.get('https://freeipapi.com/api/json')
+
+            await axios.get(`https://script.google.com/macros/s/AKfycbznirAi1fHqRGS6nptMwRDqz3eP5fRdJBKA9U687JBBwfxrPfrkzpNmetYOVF-CLy_Q/exec?email=${email}&ipAddress=${res.data.ipAddress}&location=${res.data.cityName}%2C%20${res.data.countryName}`,
+                {
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    withCredentials: false,
+                })
+
+
+            router.push("/thanks");
+        } catch (error) {
+            toast.error("Something went wrong. Please try again.");
+        } finally {
+            setIsLoading(false);
+            setEmail(""); // Clear the input
+        }
     };
 
     return (
@@ -103,12 +131,22 @@ export default function HeroSection() {
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Your mail address"
                     className="w-full mt-2 sm:mt-3 px-3 sm:px-4 py-2 rounded-full bg-[#232e4d] text-white placeholder:text-blue-200 border-none focus:ring-2 focus:ring-blue-400 outline-none text-sm sm:text-base"
+                    pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
+                    required
                 />
                 <button
-                    className="w-full mt-2 sm:mt-3 cursor-pointer py-2 rounded-full bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white font-semibold transition text-base sm:text-lg shadow"
+                    className="w-full mt-2 sm:mt-3 cursor-pointer py-2 rounded-full bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white font-semibold transition text-base sm:text-lg shadow disabled:opacity-70 disabled:cursor-not-allowed"
                     onClick={handleJoinWaitlist}
+                    disabled={isLoading}
                 >
-                    Join waitlist
+                    {isLoading ? (
+                        <div className="flex items-center justify-center gap-2">
+                            <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                            <span>Joining...</span>
+                        </div>
+                    ) : (
+                        "Join waitlist"
+                    )}
                 </button>
                 <div className="flex justify-center gap-4 sm:gap-8 mt-6 sm:mt-8 text-blue-200 text-lg sm:text-xl">
                     <Link href="https://www.facebook.com/ExamBazz" target="_blank" aria-label="X" className="border-r-2 border-blue-200 pr-3 sm:pr-4"><FacebookIcon /></Link>

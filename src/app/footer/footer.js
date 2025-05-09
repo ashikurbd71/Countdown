@@ -59,8 +59,9 @@ export default function Footer() {
                 <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row items-center justify-between text-gray-500 text-xs">
                     <div className="mb-2 md:mb-0">&copy; 2025 ExamBazz All Right Reserved</div>
                     <div className="flex space-x-6">
-                        <a href="#" className="hover:underline">Privacy Policy</a>
-                        <a href="#" className="hover:underline">Terms & Conditions</a>
+                        <Link href="/privacy-policy" className="hover:underline">Privacy Policy</Link>
+                        <Link href="/terms" className="hover:underline">Terms & Conditions</Link>
+                        <Link href="/data-deletion-policy" className="hover:underline">Data Deletion Policy</Link>
                     </div>
                 </div>
             </div>

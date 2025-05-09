@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { Toaster, toast } from "sonner";
-import img from "../../../public/exambazz.png"
+import img from "../../assets/exambazz.png"
 import Link from "next/link";
 
 export default function Header() {
