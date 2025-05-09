@@ -5,6 +5,14 @@ import Link from "next/link";
 import { toast } from "sonner";
 
 export default function FAQSection() {
+    const handleScrollToNotify = (e) => {
+        e.preventDefault();
+        const notifySection = document.getElementById('notify');
+        if (notifySection) {
+            notifySection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     const faqs = [
         { q: "How does ExamBazz differ from traditional examination methods, and what are its key advantages?", a: "ExamBazz, being an online platform, makes conducting and evaluating exams easier and faster. Key advantages include the ability to manage exams on a large scale, time efficiency, vast resources, and individual reports" },
         { q: "How can an educational institution make its examination process more efficient by using ExamBazz?", a: "ExamBazz helps institutions streamline exam planning, administration, and results analysis through customizable exam formats, question bank creation and management, and integration with other educational platforms, ultimately saving time and effort" },
@@ -34,8 +42,8 @@ export default function FAQSection() {
                     </div>
                     <Link
                         href="#notify"
+                        onClick={handleScrollToNotify}
                         className="w-full cursor-pointer sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 sm:px-6 rounded-full shadow transition-colors duration-200 mb-2 text-base sm:text-lg active:scale-95"
-
                     >
                         Join Waitlist →
                     </Link>

@@ -27,7 +27,7 @@ export default function Header() {
     };
 
     return (
-        <header className="flex justify-between items-center px-4 sm:px-6 md:px-8 lg:px-10 py-3 sm:py-4 mb-5 bg-white shadow-sm relative">
+        <header className="fixed top-0 left-0 right-0 flex justify-between items-center px-4 sm:px-6 md:px-8 lg:px-10 py-3 sm:py-4 bg-white shadow-sm z-50">
             <Image src={img} alt="Exambazz" width={110} height={10} className="w-[120px] sm:w-[140px] md:w-[150px] lg:w-[160px]" />
 
             {/* Mobile Menu Button */}
@@ -69,7 +69,10 @@ export default function Header() {
                 </nav>
                 <Link href="#notify"
                     className="bg-blue-500 hover:bg-blue-600 text-white px-3 md:px-4 py-2 rounded-xl cursor-pointer font-semibold transition text-sm md:text-base whitespace-nowrap"
-
+                    onClick={(e) => {
+                        e.preventDefault();
+                        document.querySelector('#notify').scrollIntoView({ behavior: 'smooth' });
+                    }}
                 >
                     Get Notified
                 </Link>
@@ -98,7 +101,11 @@ export default function Header() {
                             }}>FAQs</Link>
                             <Link href="#notify"
                                 className="mt-4 bg-blue-500 text-center hover:bg-blue-600 text-white px-4 py-2 rounded-xl cursor-pointer font-semibold transition w-full text-sm md:text-base"
-
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    document.querySelector('#notify').scrollIntoView({ behavior: 'smooth' });
+                                    setIsMobileMenuOpen(false);
+                                }}
                             >
                                 Get Notified
                             </Link>

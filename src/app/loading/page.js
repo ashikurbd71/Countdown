@@ -15,7 +15,7 @@ export default function LoadingScreen() {
     if (!isVisible) return null;
 
     return (
-        <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-gradient-to-br from-black via-gray-900 to-black text-white overflow-hidden">
+        <div className="fixed inset-0 z-50 flex flex-col pt-34 items-center justify-center bg-gradient-to-br from-black via-gray-900 to-black text-white overflow-hidden">
             {/* Faded background text */}
             <div className=" inset-0 flex items-center justify-center select-none pointer-events-none">
                 <span className="lg:text-[10vw] text-[45px] font-extrabold text-white/10 tracking-tight">Welcome</span>

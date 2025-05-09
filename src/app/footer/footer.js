@@ -1,3 +1,5 @@
+'use client';
+
 import { Facebook, Instagram, Linkedin, Youtube } from 'lucide-react';
 import Link from 'next/link';
 // import img from '../../../public/'
@@ -21,12 +23,18 @@ export default function Footer() {
                         <div className="space-y-4 flex flex-col justify-center lg:justify-start items-center">
                             <h3 className="text-base font-semibold text-gray-200">Links</h3>
                             <ul className="space-y-2 flex flex-col justify-center lg:justify-start items-center">
-                                <li><Link href="#benefits" className="text-gray-400 hover:text-white transition-colors">Early Benefits
-                                </Link></li>
-                                <li><Link href="#feature" className="text-gray-400 hover:text-white transition-colors">
-                                    Feature
-                                </Link></li>
-                                <li><Link href="#faq" className="text-gray-400 hover:text-white transition-colors">FAQ</Link></li>
+                                <li><Link href="#benefits" className="text-gray-400 hover:text-white transition-colors" onClick={(e) => {
+                                    e.preventDefault();
+                                    document.querySelector('#benefits').scrollIntoView({ behavior: 'smooth' });
+                                }}>Early Benefits</Link></li>
+                                <li><Link href="#feature" className="text-gray-400 hover:text-white transition-colors" onClick={(e) => {
+                                    e.preventDefault();
+                                    document.querySelector('#feature').scrollIntoView({ behavior: 'smooth' });
+                                }}>Feature</Link></li>
+                                <li><Link href="#faq" className="text-gray-400 hover:text-white transition-colors" onClick={(e) => {
+                                    e.preventDefault();
+                                    document.querySelector('#faq').scrollIntoView({ behavior: 'smooth' });
+                                }}>FAQ</Link></li>
                             </ul>
                         </div>
 

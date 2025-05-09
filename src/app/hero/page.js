@@ -58,7 +58,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="flex flex-col items-center justify-center min-h-[70vh] px-4 sm:px-6 md:px-8 lg:px-0 relative overflow-hidden"
+            className="flex flex-col items-center justify-center min-h-[70vh] px-4 mt-22 sm:px-6 md:px-8 lg:px-0 relative overflow-hidden"
             style={{
                 backgroundImage: "url('/bg.jpg')",
                 backgroundSize: "cover",
