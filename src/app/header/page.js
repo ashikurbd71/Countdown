@@ -53,10 +53,19 @@ export default function Header() {
             {/* Desktop Navigation */}
             <div className="hidden md:flex gap-3 md:gap-4 lg:gap-6 items-center">
                 <nav className="font-semibold flex gap-3 md:gap-4 lg:gap-6 text-gray-700">
-                    <Link href="#benefits" className="hover:text-blue-500 transition-colors text-sm md:text-base">Early Benefits</Link>
+                    <Link href="#benefits" className="hover:text-blue-500 transition-colors text-sm md:text-base" onClick={(e) => {
+                        e.preventDefault();
+                        document.querySelector('#benefits').scrollIntoView({ behavior: 'smooth' });
+                    }}>Early Benefits</Link>
 
-                    <Link href="#feature" className="hover:text-blue-500 transition-colors text-sm md:text-base">Feature</Link>
-                    <Link href="#faq" className="hover:text-blue-500 transition-colors text-sm md:text-base">FAQs</Link>
+                    <Link href="#feature" className="hover:text-blue-500 transition-colors text-sm md:text-base" onClick={(e) => {
+                        e.preventDefault();
+                        document.querySelector('#feature').scrollIntoView({ behavior: 'smooth' });
+                    }}>Feature</Link>
+                    <Link href="#faq" className="hover:text-blue-500 transition-colors text-sm md:text-base" onClick={(e) => {
+                        e.preventDefault();
+                        document.querySelector('#faq').scrollIntoView({ behavior: 'smooth' });
+                    }}>FAQs</Link>
                 </nav>
                 <Link href="#notify"
                     className="bg-blue-500 hover:bg-blue-600 text-white px-3 md:px-4 py-2 rounded-xl cursor-pointer font-semibold transition text-sm md:text-base whitespace-nowrap"
@@ -71,10 +80,22 @@ export default function Header() {
                 isMobileMenuOpen && (
                     <div className="absolute top-full left-0 z-50 right-0 bg-white shadow-lg md:hidden border-t">
                         <nav className="flex flex-col p-4 space-y-2">
-                            <Link href="#benefits" className="py-2 px-3 text-gray-700 font-semibold hover:bg-gray-50 rounded-lg transition-colors text-sm md:text-base">Early Benefits</Link>
+                            <Link href="#benefits" className="py-2 px-3 text-gray-700 font-semibold hover:bg-gray-50 rounded-lg transition-colors text-sm md:text-base" onClick={(e) => {
+                                e.preventDefault();
+                                document.querySelector('#benefits').scrollIntoView({ behavior: 'smooth' });
+                                setIsMobileMenuOpen(false);
+                            }}>Early Benefits</Link>
 
-                            <Link href="#feature" className="py-2 px-3 text-gray-700 font-semibold hover:bg-gray-50 rounded-lg transition-colors text-sm md:text-base">Feature</Link>
-                            <Link href="#faq" className="py-2 px-3 text-gray-700 font-semibold hover:bg-gray-50 rounded-lg transition-colors text-sm md:text-base">FAQs</Link>
+                            <Link href="#feature" className="py-2 px-3 text-gray-700 font-semibold hover:bg-gray-50 rounded-lg transition-colors text-sm md:text-base" onClick={(e) => {
+                                e.preventDefault();
+                                document.querySelector('#feature').scrollIntoView({ behavior: 'smooth' });
+                                setIsMobileMenuOpen(false);
+                            }}>Feature</Link>
+                            <Link href="#faq" className="py-2 px-3 text-gray-700 font-semibold hover:bg-gray-50 rounded-lg transition-colors text-sm md:text-base" onClick={(e) => {
+                                e.preventDefault();
+                                document.querySelector('#faq').scrollIntoView({ behavior: 'smooth' });
+                                setIsMobileMenuOpen(false);
+                            }}>FAQs</Link>
                             <Link href="#notify"
                                 className="mt-4 bg-blue-500 text-center hover:bg-blue-600 text-white px-4 py-2 rounded-xl cursor-pointer font-semibold transition w-full text-sm md:text-base"
 

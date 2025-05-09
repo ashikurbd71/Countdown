@@ -29,7 +29,7 @@ const TermsPage = () => {
                         <ul className="list-disc pl-4 sm:pl-6 space-y-2 text-sm sm:text-base lg:text-lg">
                             <li>You are responsible for any content you submit or upload to the Platform.</li>
                             <li>You represent that you have all necessary rights to your User Content and that your User Content does not infringe the rights of any third party.</li>
-                            <li>You agree not to submit or upload any User Content that is unlawful, harmful, threatening, abusive, harassing, defamatory, vulgar, obscene, libelous, invasive of another's privacy, hateful, racially, ethnically, or otherwise objectionable.</li>
+                            <li>You agree not to submit or upload any User Content that is unlawful, harmful, threatening, abusive, harassing, defamatory, vulgar, obscene, libelous, invasive of another&apos;s privacy, hateful, racially, ethnically, or otherwise objectionable.</li>
                         </ul>
                     </section>
 

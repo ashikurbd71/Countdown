@@ -146,6 +146,12 @@ function Header() {
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                 href: "#benefits",
                                 className: "hover:text-blue-500 transition-colors text-sm md:text-base",
+                                onClick: (e)=>{
+                                    e.preventDefault();
+                                    document.querySelector('#benefits').scrollIntoView({
+                                        behavior: 'smooth'
+                                    });
+                                },
                                 children: "Early Benefits"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/header/page.js",
@@ -155,19 +161,31 @@ function Header() {
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                 href: "#feature",
                                 className: "hover:text-blue-500 transition-colors text-sm md:text-base",
+                                onClick: (e)=>{
+                                    e.preventDefault();
+                                    document.querySelector('#feature').scrollIntoView({
+                                        behavior: 'smooth'
+                                    });
+                                },
                                 children: "Feature"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/header/page.js",
-                                lineNumber: 58,
+                                lineNumber: 61,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                 href: "#faq",
                                 className: "hover:text-blue-500 transition-colors text-sm md:text-base",
+                                onClick: (e)=>{
+                                    e.preventDefault();
+                                    document.querySelector('#faq').scrollIntoView({
+                                        behavior: 'smooth'
+                                    });
+                                },
                                 children: "FAQs"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/header/page.js",
-                                lineNumber: 59,
+                                lineNumber: 65,
                                 columnNumber: 21
                             }, this)
                         ]
@@ -182,7 +200,7 @@ function Header() {
                         children: "Get Notified"
                     }, void 0, false, {
                         fileName: "[project]/src/app/header/page.js",
-                        lineNumber: 61,
+                        lineNumber: 70,
                         columnNumber: 17
                     }, this)
                 ]
@@ -199,28 +217,49 @@ function Header() {
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                             href: "#benefits",
                             className: "py-2 px-3 text-gray-700 font-semibold hover:bg-gray-50 rounded-lg transition-colors text-sm md:text-base",
+                            onClick: (e)=>{
+                                e.preventDefault();
+                                document.querySelector('#benefits').scrollIntoView({
+                                    behavior: 'smooth'
+                                });
+                                setIsMobileMenuOpen(false);
+                            },
                             children: "Early Benefits"
                         }, void 0, false, {
                             fileName: "[project]/src/app/header/page.js",
-                            lineNumber: 74,
+                            lineNumber: 83,
                             columnNumber: 29
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                             href: "#feature",
                             className: "py-2 px-3 text-gray-700 font-semibold hover:bg-gray-50 rounded-lg transition-colors text-sm md:text-base",
+                            onClick: (e)=>{
+                                e.preventDefault();
+                                document.querySelector('#feature').scrollIntoView({
+                                    behavior: 'smooth'
+                                });
+                                setIsMobileMenuOpen(false);
+                            },
                             children: "Feature"
                         }, void 0, false, {
                             fileName: "[project]/src/app/header/page.js",
-                            lineNumber: 76,
+                            lineNumber: 89,
                             columnNumber: 29
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                             href: "#faq",
                             className: "py-2 px-3 text-gray-700 font-semibold hover:bg-gray-50 rounded-lg transition-colors text-sm md:text-base",
+                            onClick: (e)=>{
+                                e.preventDefault();
+                                document.querySelector('#faq').scrollIntoView({
+                                    behavior: 'smooth'
+                                });
+                                setIsMobileMenuOpen(false);
+                            },
                             children: "FAQs"
                         }, void 0, false, {
                             fileName: "[project]/src/app/header/page.js",
-                            lineNumber: 77,
+                            lineNumber: 94,
                             columnNumber: 29
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -229,18 +268,18 @@ function Header() {
                             children: "Get Notified"
                         }, void 0, false, {
                             fileName: "[project]/src/app/header/page.js",
-                            lineNumber: 78,
+                            lineNumber: 99,
                             columnNumber: 29
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/header/page.js",
-                    lineNumber: 73,
+                    lineNumber: 82,
                     columnNumber: 25
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/header/page.js",
-                lineNumber: 72,
+                lineNumber: 81,
                 columnNumber: 21
             }, this)
         ]
@@ -383,7 +422,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 function CountdownComponent() {
     const targetDate = new Date("2025-05-17T00:00:00"); // 17 May 2025
-    function getTimeLeft() {
+    const getTimeLeft = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useCallback"])(()=>{
         const now = new Date();
         const diff = Math.max(0, targetDate.getTime() - now.getTime());
         const days = Math.floor(diff / (1000 * 60 * 60 * 24));
@@ -396,7 +435,9 @@ function CountdownComponent() {
             minutes,
             seconds
         };
-    }
+    }, [
+        targetDate
+    ]);
     const [time, setTime] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(getTimeLeft());
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         const timer = setInterval(()=>setTime(getTimeLeft()), 1000);

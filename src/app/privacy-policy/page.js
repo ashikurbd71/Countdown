@@ -46,7 +46,7 @@ export default function PrivacyPolicy() {
                                     We will want to know about your purpose and how you will use the platform, such as the pages you visit,
                                     the features you use, and the time you spend on the platform. We will use this data to identify your
                                     preference and will decorate the site according to that so that we can improve the user experience and
-                                    optimize the platform's performance. Furthermore, The platform must comply with local and international
+                                    optimize the platform&apos;s performance. Furthermore, The platform must comply with local and international
                                     educational standards for online assessments.
                                 </p>
                             </div>

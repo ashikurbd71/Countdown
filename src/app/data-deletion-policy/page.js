@@ -10,7 +10,7 @@ const DataDeletionPolicy = () => {
                 <div className="prose prose-sm sm:prose-base lg:prose-lg max-w-none">
                     <p className="mb-4 sm:mb-6 text-gray-700">
                         At ExamBazz, we are committed to protecting the privacy and data rights of our users.
-                        This Data Deletion Policy outlines the procedures and conditions under which users'
+                        This Data Deletion Policy outlines the procedures and conditions under which users&apos;
                         personal data is deleted from our systems. By using our services, you agree to the
                         terms outlined below.
                     </p>

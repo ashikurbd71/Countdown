@@ -1,12 +1,12 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import dynamic from 'next/dynamic';
 
 function CountdownComponent() {
     const targetDate = new Date("2025-05-17T00:00:00"); // 17 May 2025
 
-    function getTimeLeft() {
+    const getTimeLeft = useCallback(() => {
         const now = new Date();
         const diff = Math.max(0, targetDate.getTime() - now.getTime());
 
@@ -15,7 +15,7 @@ function CountdownComponent() {
         const minutes = Math.floor((diff / (1000 * 60)) % 60);
         const seconds = Math.floor((diff / 1000) % 60);
         return { days, hours, minutes, seconds };
-    }
+    }, [targetDate]);
 
     const [time, setTime] = useState(getTimeLeft());
 
